@@ -22,7 +22,7 @@ import user.service.Command;
 /**
  * Servlet implementation class UserController
  */
-@WebServlet(urlPatterns = ".do", initParams = {@WebInitParam(name = "configFile", value = "/WEB-INF/prop/userCommand.properties")})
+@WebServlet(urlPatterns = "*.do", initParams = {@WebInitParam(name = "configFile", value = "/WEB-INF/prop/userCommand.properties")})
 public class UserController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 private Map<String, Command> commandMap = new HashMap<>();
