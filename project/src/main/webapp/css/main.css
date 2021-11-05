@@ -1,0 +1,34 @@
+@charset "UTF-8";
+	* {
+		padding: 0;
+		margin: 0;
+		font-size: 10px;
+	}
+	body {
+		display: flex;
+	}
+	div {
+		display: flex;
+	}
+	#header {
+		background: pink;
+		align-items: baseline;
+		padding: 1rem;
+	}
+	#header .logo {
+		margin: 0 2rem;
+		font-size: 3.2rem;
+		
+	}
+	#header .employeeInfo {
+		margin: 0 1rem;
+		font-size: 1.8rem;
+	}
+	#sideBar {
+		background: green;
+		flex-direction: column;
+		
+	}
+	#sideBar .tabTitle {
+		flex: 0;
+	}
