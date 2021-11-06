@@ -66,7 +66,7 @@ private Map<String, Command> commandMap = new HashMap<>();
 		if (command != null) 
 			viewPage = command.execute(request, response);
 		else if (command == null) 
-			viewPage = "/project/loginForm.do";
+			viewPage = "/project/userView/loginForm.jsp";
 		
 		if (viewPage != null) {
 			RequestDispatcher dispatcher = request.getRequestDispatcher(viewPage);
