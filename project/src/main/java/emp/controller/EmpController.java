@@ -1,4 +1,4 @@
-package user.controller;
+package emp.controller;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -16,16 +16,16 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import user.service.Command;
+import emp.service.Command;
 
 
 /**
  * Servlet implementation class UserController
  */
-@WebServlet(urlPatterns = "*.do", initParams = {@WebInitParam(name = "configFile", value = "/WEB-INF/prop/userCommand.properties")})
-public class UserController extends HttpServlet {
+@WebServlet(urlPatterns = "*.do", initParams = {@WebInitParam(name = "configFile", value = "/WEB-INF/prop/empCommand.properties")})
+public class EmpController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-private Map<String, Command> commandMap = new HashMap<>();
+	private Map<String, Command> commandMap = new HashMap<>();
 	
 	@Override
 	public void init(ServletConfig config) throws ServletException {
@@ -66,7 +66,7 @@ private Map<String, Command> commandMap = new HashMap<>();
 		if (command != null) 
 			viewPage = command.execute(request, response);
 		else if (command == null) 
-			viewPage = "/project/userView/loginForm.jsp";
+			viewPage = "/empView/loginForm.jsp";
 		
 		if (viewPage != null) {
 			RequestDispatcher dispatcher = request.getRequestDispatcher(viewPage);

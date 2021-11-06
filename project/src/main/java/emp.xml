@@ -2,11 +2,11 @@
 <!DOCTYPE mapper
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="user.sql">
-	<select id="selectUser" parameterType="string" resultType="User">
-		select * from user_ where id = #{id}
+<mapper namespace="emp.sql">
+	<select id="selectEmp" parameterType="string" resultType="emp">
+		select * from emp where empno = #{empno}
 	</select>
-	<insert id="insertUser" parameterType="User">
+	<insert id="insertEmp" parameterType="emp">
 		insert into user_ values (#{id}, #{password}, #{name}, #{address}, #{tel}, sysdate, 'n')
 	</insert>
 </mapper>
