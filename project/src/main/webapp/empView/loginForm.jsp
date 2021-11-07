@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <title>로그인</title>
 <style type="text/css">
-	@import url('/project/css/loginForm.css?36')
+	@import url('/project/css/loginForm.css?37')
 </style>
 </head>
 <body>
@@ -26,8 +26,7 @@
 				</div>
 			</form>
 		<div class="option">
-			<div><button onclick="location.href='joinForm.do'">사원등록</button></div>
-			<div><button onclick="joinForm.do">비밀번호 찾기</button></div>
+			<a href="/project/initPassword.do">비밀번호를 잊으셨나요?</a>
 		</div>
 	</div>
 	<div class="footer">
